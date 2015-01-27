@@ -19,7 +19,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5V5-lx-0ce">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewLayout key="collectionViewLayout" id="JOl-SP-dht" customClass="NoiseCollectionViewLayout" customModule="Noise" customModuleProvider="target"/>
+                                <collectionViewLayout key="collectionViewLayout" id="JOl-SP-dht" customClass="StreamCollectionViewLayout" customModule="Noise" customModuleProvider="target"/>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="headerCell" id="WO1-Ki-Mfw">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>

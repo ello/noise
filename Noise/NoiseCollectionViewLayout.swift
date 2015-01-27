@@ -1,5 +1,5 @@
 //
-//  NoiseCollectionViewLayout.swift
+//  StreamCollectionViewLayout.swift
 //  Ello
 //
 //  Created by Sean on 1/26/15.
@@ -10,7 +10,7 @@
 import Foundation
 import UIKit
 
-@objc protocol NoiseCollectionViewLayoutDelegate: UICollectionViewDelegate {
+@objc protocol StreamCollectionViewLayoutDelegate: UICollectionViewDelegate {
     
     func collectionView (collectionView: UICollectionView,layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize
@@ -25,7 +25,7 @@ import UIKit
         minimumInteritemSpacingForSectionAtIndex section: NSInteger) -> CGFloat
 }
 
-class NoiseCollectionViewLayout : UICollectionViewLayout {
+class StreamCollectionViewLayout : UICollectionViewLayout {
 
     enum Direction {
         case ShortestFirst
@@ -53,9 +53,9 @@ class NoiseCollectionViewLayout : UICollectionViewLayout {
         didSet { invalidateLayout() }
     }
 
-    weak var delegate : NoiseCollectionViewLayoutDelegate? {
+    weak var delegate : StreamCollectionViewLayoutDelegate? {
         get {
-            return self.collectionView!.delegate as? NoiseCollectionViewLayoutDelegate
+            return self.collectionView!.delegate as? StreamCollectionViewLayoutDelegate
         }
     }
     var columnHeights = [Double]()

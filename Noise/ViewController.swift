@@ -8,14 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController, NoiseCollectionViewLayoutDelegate {
+class ViewController: UIViewController, StreamCollectionViewLayoutDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView!
     let dataSource = NoiseDataSource()
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let layout:NoiseCollectionViewLayout = collectionView.collectionViewLayout as NoiseCollectionViewLayout
+        let layout:StreamCollectionViewLayout = collectionView.collectionViewLayout as StreamCollectionViewLayout
         layout.columnCount = 1
         layout.sectionInset = UIEdgeInsetsZero
         layout.minimumColumnSpacing = 12
@@ -39,23 +39,25 @@ class ViewController: UIViewController, NoiseCollectionViewLayoutDelegate {
 
 
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
-        let layout:NoiseCollectionViewLayout = collectionView.collectionViewLayout as NoiseCollectionViewLayout
+        let layout:StreamCollectionViewLayout = collectionView.collectionViewLayout as StreamCollectionViewLayout
         layout.columnCount = size.width < size.height ? 2 : 3;
     }
 
     @IBAction func oneColumnTapped(sender: UIButton) {
-        let layout:NoiseCollectionViewLayout = collectionView.collectionViewLayout as NoiseCollectionViewLayout
-        layout.columnCount = 1
+        changeColumnCount(1)
     }
 
     @IBAction func twoColumnTapped(sender: UIButton) {
-        let layout:NoiseCollectionViewLayout = collectionView.collectionViewLayout as NoiseCollectionViewLayout
-        layout.columnCount = 2
+        changeColumnCount(2)
     }
 
     @IBAction func threeColumnTapped(sender: UIButton) {
-        let layout:NoiseCollectionViewLayout = collectionView.collectionViewLayout as NoiseCollectionViewLayout
-        layout.columnCount = 3
+        changeColumnCount(3)
+    }
+
+    private func changeColumnCount(count:Int) {
+        let layout:StreamCollectionViewLayout = collectionView.collectionViewLayout as StreamCollectionViewLayout
+        layout.columnCount = count
     }
 
 }
