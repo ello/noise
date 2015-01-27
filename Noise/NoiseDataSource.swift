@@ -69,7 +69,6 @@ class NoiseDataSource: NSObject, UICollectionViewDataSource {
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        println(indexPath)
         let data = cells[indexPath.item]
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(data.kind.identifier, forIndexPath: indexPath) as UICollectionViewCell
 

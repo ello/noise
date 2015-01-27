@@ -16,7 +16,7 @@ class ViewController: UIViewController, NoiseCollectionViewLayoutDelegate {
         super.viewDidLoad()
 
         let layout:NoiseCollectionViewLayout = collectionView.collectionViewLayout as NoiseCollectionViewLayout
-        layout.columnCount = 2
+        layout.columnCount = 1
         layout.sectionInset = UIEdgeInsetsZero
         layout.minimumColumnSpacing = 12
         layout.minimumInteritemSpacing = 0
@@ -37,13 +37,25 @@ class ViewController: UIViewController, NoiseCollectionViewLayoutDelegate {
         return self.dataSource.cells[indexPath.item].groupIndex
     }
 
-    override func willTransitionToTraitCollection(newCollection: UITraitCollection, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
-        println("willTransitionToTraitCollection = \(newCollection)")
-    }
 
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
         let layout:NoiseCollectionViewLayout = collectionView.collectionViewLayout as NoiseCollectionViewLayout
         layout.columnCount = size.width < size.height ? 2 : 3;
+    }
+
+    @IBAction func oneColumnTapped(sender: UIButton) {
+        let layout:NoiseCollectionViewLayout = collectionView.collectionViewLayout as NoiseCollectionViewLayout
+        layout.columnCount = 1
+    }
+
+    @IBAction func twoColumnTapped(sender: UIButton) {
+        let layout:NoiseCollectionViewLayout = collectionView.collectionViewLayout as NoiseCollectionViewLayout
+        layout.columnCount = 2
+    }
+
+    @IBAction func threeColumnTapped(sender: UIButton) {
+        let layout:NoiseCollectionViewLayout = collectionView.collectionViewLayout as NoiseCollectionViewLayout
+        layout.columnCount = 3
     }
 
 }

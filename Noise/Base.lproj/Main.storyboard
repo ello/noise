@@ -53,13 +53,49 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xhd-JM-Llw">
+                                <rect key="frame" x="267" y="550" width="66" height="30"/>
+                                <state key="normal" title="2 Column">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="twoColumnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="el0-IY-m10"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ith-2e-cUB">
+                                <rect key="frame" x="518" y="550" width="66" height="30"/>
+                                <state key="normal" title="3 Column">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="threeColumnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YyW-gE-NCn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4g-dN-XOB">
+                                <rect key="frame" x="16" y="550" width="66" height="30"/>
+                                <state key="normal" title="1 Column">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="oneColumnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="71k-be-hLG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="5V5-lx-0ce" secondAttribute="bottom" id="0ui-L8-NbI"/>
                             <constraint firstItem="5V5-lx-0ce" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9Qn-Jc-U7G"/>
+                            <constraint firstAttribute="trailing" secondItem="ith-2e-cUB" secondAttribute="trailing" constant="16" id="9UV-qw-w77"/>
+                            <constraint firstAttribute="centerX" secondItem="Xhd-JM-Llw" secondAttribute="centerX" id="CHf-Dg-Cyt"/>
+                            <constraint firstAttribute="bottom" secondItem="ith-2e-cUB" secondAttribute="bottom" constant="20" id="Fcn-72-sJ8"/>
                             <constraint firstAttribute="trailing" secondItem="5V5-lx-0ce" secondAttribute="trailing" id="HyM-JO-UyJ"/>
                             <constraint firstItem="5V5-lx-0ce" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Q38-OC-rf0"/>
+                            <constraint firstAttribute="bottom" secondItem="F4g-dN-XOB" secondAttribute="bottom" constant="20" id="RKF-Xw-65h"/>
+                            <constraint firstAttribute="bottom" secondItem="Xhd-JM-Llw" secondAttribute="bottom" constant="20" id="mk2-rm-gRr"/>
+                            <constraint firstItem="F4g-dN-XOB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="vgp-Ck-JTZ"/>
                         </constraints>
                     </view>
                     <connections>
